@@ -1,0 +1,27 @@
+{
+  "name": "soy-hyperclick",
+  "author": "Ben Haines",
+  "main": "./lib/main",
+  "version": "0.0.1",
+  "description": "Hyperclick support for Soy templates",
+  "keywords": [
+    "hyperclick",
+    "soy"
+  ],
+  "repository": "https://github.com/bhainesva/soy-hyperclick",
+  "bugs": "https://github.com/bhainesva/soy-hyperclick/issues",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "providedServices": {
+    "hyperclick.provider": {
+      "versions": {
+        "0.0.0": "getProvider"
+      }
+    }
+  },
+  "dependencies": {
+    "fs-extra": "^3.0.1"
+  }
+}
