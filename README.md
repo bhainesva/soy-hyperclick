@@ -22,6 +22,7 @@ The Hyperclick package is required.
 * **Templates**: more or less jump to template definitions
 
 ### Gross Hacks and Missing Things
+* the editor gets pretty slow while the cache is being created
 * hardcoded to only search files that include "src/templates" in their path
 * requires that the namespace declaration be on the first line of the file
 * loads the entire file to determine its namespace when making the cache
