@@ -26,14 +26,14 @@ The Hyperclick package is required.
   * could be longer than briefly depending on how many things you have open
 * doesn't really remove files from the cache, just tries to open them and fails
   * not sure what would happen if you have a template defined in a deleted file and an existing file
+  * things in general might be weird with renaming/deleting files
 * hardcoded to only search files that include "src/templates" in their path
 * hardcoded to ignore directories containing "node_modules", "bower_components", or "./"
-* requires that the namespace declaration be the first soy tag in the file
+* requires that the namespace declaration be on the first line of the file
+  * sometimes it'll work anyway as long as it's the first soy tag
   * would be a problem if we used {delpackage} which goes before {namespace}
 * loads the entire file to determine its namespace when making the cache
+  * I don't know if reading line by line would be any better
 * doesn't support jumping to variable definitions
-* if it finds a match in a cached file it will open it then search through the file again
-* internally, `templateName` sometimes includes the namespace, sometimes a period, and sometimes neither
-* defines very similar regexes in multiple places
 * no error handling
 * no tests
