@@ -22,11 +22,16 @@ The Hyperclick package is required.
 * **Templates**: more or less jump to template definitions
 
 ### Gross Hacks and Missing Things
+* the editor gets slow briefly while the cache is being created
+  * could be longer than briefly depending on how many things you have open
+* only reloads the cache when a new path (project folder) is added to the project
+  * so it works fine when browsing an existing project but not as much while writing code
 * hardcoded to only search files that include "src/templates" in their path
-* requires that the namespace declaration be on the first line of the file
+* hardcoded to ignore directories containing "node_modules", "bower_components", or "./"
+* requires that the namespace declaration be the first soy tag in the file
+  * would be a problem if we used {delpackage} which goes before {namespace}
 * loads the entire file to determine its namespace when making the cache
 * doesn't support jumping to variable definitions
-* only reloads the cache when a new path is added to the project
 * if it finds a match in a cached file it will open it then search through the file again
 * internally, `templateName` sometimes includes the namespace, sometimes a period, and sometimes neither
 * defines very similar regexes in multiple places
