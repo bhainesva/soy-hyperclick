@@ -24,8 +24,8 @@ The Hyperclick package is required.
 ### Gross Hacks and Missing Things
 * the editor gets slow briefly while the cache is being created
   * could be longer than briefly depending on how many things you have open
-* only reloads the cache when a new path (project folder) is added to the project
-  * so it works fine when browsing an existing project but not as much while writing code
+* doesn't really remove files from the cache, just tries to open them and fails
+  * not sure what would happen if you have a template defined in a deleted file and an existing file
 * hardcoded to only search files that include "src/templates" in their path
 * hardcoded to ignore directories containing "node_modules", "bower_components", or "./"
 * requires that the namespace declaration be the first soy tag in the file
