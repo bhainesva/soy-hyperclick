@@ -5,7 +5,7 @@ provider for Soy templates. Based on [hyperclick-php](https://github.com/clayton
 The Hyperclick package is required.
 
 ### Installation
-1. Install the normal 'hyperclick' package by facebooknuclide 
+1. Install the normal 'hyperclick' package by facebooknuclide through atom's normal package installation thing
 2. clone this repo somewhere
 3. cd into the repo
 4. install dependencies: `apm install`
