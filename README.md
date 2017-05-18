@@ -1,14 +1,16 @@
 # Soy Hyperclick
 
-A *very* simple [Hyperclick](https://github.com/facebooknuclideapm/hyperclick)
-provider for Soy templates. Inspired by [hyperclick-php](https://github.com/claytonrcarter/hyperclick-php).
+A simple [Hyperclick](https://github.com/facebooknuclideapm/hyperclick)
+provider for Soy templates. Based on [hyperclick-php](https://github.com/claytonrcarter/hyperclick-php).
 The Hyperclick package is required.
 
 ### Installation
-1. clone the repo somewhere
-2. cd into the repo
-3. install dependencies: `apm install`
-4. link to atom: `apm link`
+1. Install the normal 'hyperclick' package by facebooknuclide 
+2. clone this repo somewhere
+3. cd into the repo
+4. install dependencies: `apm install`
+5. link to atom: `apm link`
+6. restart atom
 
 ### Uninstallation
 1. cd to wherever you cloned the package
@@ -21,7 +23,7 @@ The Hyperclick package is required.
 ### Features
 * **Templates**: more or less jump to template definitions
 
-### Gross Hacks and Missing Things
+### Hacks and Missing Things
 * the editor gets slow briefly while the cache is being created
   * could be longer than briefly depending on how many things you have open
 * doesn't really remove files from the cache, just tries to open them and fails
@@ -37,3 +39,5 @@ The Hyperclick package is required.
 * doesn't support jumping to variable definitions
 * no error handling
 * no tests
+
+In order to publish this as a regular atom package I need to remove the hardcoded stuff without making atom crawl.
